@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Wędka teleskopowa 3.6m",
+    "price": 129.99,
+    "description": "Lekka i wytrzymała wędka do połowu z brzegu",
+    "image": "./assets/img/wedka3.6.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 2,
+    "name": "Kołowrotek spinningowy 3000",
+    "price": 199.99,
+    "description": "Płynna praca i precyzyjny hamulec",
+    "image": "./assets/img/kolowrotek3000.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 3,
+    "name": "Zestaw przynęt gumowych",
+    "price": 49.99,
+    "description": "Różnorodne kolory i rozmiary dla drapieżników",
+    "image": "./assets/img/zestawprzynetgumowych.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 4,
+    "name": "Żyłka wędkarska 0.25mm 300m",
+    "price": 19.99,
+    "description": "Wytrzymała i odporna na ścieranie",
+    "image": "./assets/img/zylka025.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 5,
+    "name": "Torba wędkarska z przegródkami",
+    "price": 89.99,
+    "description": "Pojemna torba z miejscem na akcesoria",
+    "image": "./assets/img/torbazprzegrodkami.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 6,
+    "name": "Spławiki zestaw 10 szt.",
+    "price": 24.99,
+    "description": "Różne rozmiary do połowu spokojnego",
+    "image": "./assets/img/splawiki10.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 7,
+    "name": "Haczyki karpiowe bezzadziorowe",
+    "price": 14.99,
+    "description": "Ekologiczne i bezpieczne dla ryb",
+    "image": "./assets/img/haczykikarp.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 8,
+    "name": "Podbierak składany 80cm",
+    "price": 59.99,
+    "description": "Aluminiowa rama i wytrzymała siatka",
+    "image": "./assets/img/podbierak.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 9,
+    "name": "Zestaw skrzynek wędkarskich",
+    "price": 119.99,
+    "description": "Wielopoziomowe przechowywanie sprzętu",
+    "image": "./assets/img/skrzynki.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 10,
+    "name": "Kombinezon wodoodporny",
+    "price": 249.99,
+    "description": "Ochrona przed wodą i wiatrem",
+    "image": "./assets/img/kombinezon.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 11,
+    "name": "Echosonda wędkarska przenośna",
+    "price": 349.99,
+    "description": "Wykrywanie ryb i ukształtowania dna",
+    "image": "./assets/img/echosonda.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 12,
+    "name": "Krzesło wędkarskie składane",
+    "price": 99.99,
+    "description": "Lekka i wygodna konstrukcja z oparciem",
+    "image": "./assets/img/krzeslo.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 13,
+    "name": "Przynęty woblery 5 szt.",
+    "price": 64.99,
+    "description": "Realistyczne wzory i ruchy pod wodą",
+    "image": "./assets/img/woblery.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 14,
+    "name": "Siatka na ryby 2m",
+    "price": 34.99,
+    "description": "Wentylowana siatka do przechowywania połowu",
+    "image": "./assets/img/siatka.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 15,
+    "name": "Waga cyfrowa do ryb",
+    "price": 44.99,
+    "description": "Dokładny pomiar wagi do 40 kg",
+    "image": "./assets/img/waga.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 16,
+    "name": "Nożyczki do cięcia plecionki",
+    "price": 12.99,
+    "description": "Precyzyjne ostrze ze stali nierdzewnej",
+    "image": "./assets/img/nozyczki.jpeg",
+    "category": "fishing"
+  },
+  {
+    "id": 17,
+    "name": "Zestaw ołowianych ciężarków",
+    "price": 22.99,
+    "description": "Różne rozmiary do różnych technik",
+    "image": "./assets/img/ciezarki.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 18,
+    "name": "Latarka czołowa LED",
+    "price": 34.99,
+    "description": "Świetna widoczność nocą nad wodą",
+    "image": "./assets/img/latarka.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 19,
+    "name": "Przypony karpiowe gotowe 6 szt.",
+    "price": 27.99,
+    "description": "Gotowe do użycia, mocne i niezawodne",
+    "image": "./assets/img/przypony.jpg",
+    "category": "fishing"
+  },
+  {
+    "id": 20,
+    "name": "Termos stalowy 1L",
+    "price": 39.99,
+    "description": "Utrzymuje temperaturę przez wiele godzin",
+    "image": "./assets/img/termos.jpg",
+    "category": "fishing"
+  }
+]

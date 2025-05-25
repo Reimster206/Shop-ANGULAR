@@ -1,0 +1,88 @@
+<div class="cart-container">
+  <h2>Twój koszyk</h2>
+  
+  <div *ngIf="cartItems.length === 0" class="empty-cart">
+    <mat-icon>remove_shopping_cart</mat-icon>
+    <p>Twój koszyk jest pusty</p>
+  </div>
+
+  <div *ngIf="cartItems.length > 0">
+    <table mat-table [dataSource]="cartItems" class="mat-elevation-z8">
+      <!-- Product Column -->
+      <ng-container matColumnDef="product">
+        <th mat-header-cell *matHeaderCellDef>Produkt</th>
+        <td mat-cell *matCellDef="let item">
+          <div class="product-info">
+            <img [src]="item.product.image" [alt]="item.product.name">
+            <span>{{item.product.name}}</span>
+          </div>
+        </td>
+      </ng-container>
+
+      <!-- Price Column -->
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef>Cena</th>
+        <td mat-cell *matCellDef="let item">
+          {{item.product.price | currency:'PLN':'symbol':'1.2-2'}}
+        </td>
+      </ng-container>
+
+      <!-- Quantity Column -->
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef>Ilość</th>
+        <td mat-cell *matCellDef="let item">
+          <input type="number" min="1" [value]="item.quantity" 
+                 (change)="updateQuantity(item, $event)">
+        </td>
+      </ng-container>
+
+      <!-- Total Column -->
+      <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef>Razem</th>
+        <td mat-cell *matCellDef="let item">
+          {{(item.product.price * item.quantity) | currency:'PLN':'symbol':'1.2-2'}}
+        </td>
+      </ng-container>
+
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Akcje</th>
+        <td mat-cell *matCellDef="let item">
+          <button mat-icon-button color="warn" (click)="removeItem(item)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <div class="discount-section">
+      <mat-form-field appearance="outline">
+        <mat-label>Kod rabatowy</mat-label>
+        <input matInput [(ngModel)]="discountCode">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="applyDiscount()">Zastosuj kod</button>
+    </div>
+
+    <div class="summary-section">
+      <div class="summary-row">
+        <span>Suma częściowa:</span>
+        <span>{{getSubtotal() | currency:'PLN':'symbol':'1.2-2'}}</span>
+      </div>
+      <div class="summary-row" *ngIf="getDiscount() > 0">
+        <span>Zniżka:</span>
+        <span class="discount">-{{getDiscount() | currency:'PLN':'symbol':'1.2-2'}}</span>
+      </div>
+      <div class="summary-row total">
+        <span>Do zapłaty:</span>
+        <span>{{getTotal() | currency:'PLN':'symbol':'1.2-2'}}</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button mat-raised-button color="primary" (click)="checkout()">Złóż zamówienie</button>
+    </div>
+  </div>
+</div>

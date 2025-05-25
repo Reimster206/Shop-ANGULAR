@@ -1,0 +1,37 @@
+<div class="product-list-container">
+  <mat-toolbar color="primary">
+    <span class="spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="sortMenu">
+      <mat-icon>sort</mat-icon>
+    </button>
+    <mat-menu #sortMenu="matMenu">
+      <button mat-menu-item *ngFor="let option of sortOptions" 
+              (click)="selectedSort = option.value; onSortChange()"
+              [class.active]="selectedSort === option.value">
+        {{option.label}}
+      </button>
+    </mat-menu>
+    
+    <mat-form-field appearance="outline">
+      <mat-label>Szukaj</mat-label>
+      <input matInput [(ngModel)]="searchTerm" (ngModelChange)="onSearch()">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </mat-toolbar>
+
+  <div class="product-grid">
+    <mat-card *ngFor="let product of filteredProducts" class="product-card">
+      <img mat-card-image [src]="product.image" [alt]="product.name">
+      <mat-card-content>
+        <h3>{{product.name}}</h3>
+        <p>{{product.description}}</p>
+        <p class="price">{{product.price | currency:'PLN':'symbol':'1.2-2'}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="addToCart(product)">
+          <mat-icon>add_shopping_cart</mat-icon> Dodaj do koszyka
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

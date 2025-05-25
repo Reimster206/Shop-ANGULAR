@@ -1,0 +1,40 @@
+<div class="receipt-container">
+  <h2>Paragon</h2>
+  
+  <div class="receipt-header">
+    <p>Sklep Internetowy</p>
+    <p>Nr zamówienia: {{data.receiptId}}</p>
+    <p>Data: {{data.date | date:'dd.MM.yyyy HH:mm'}}</p>
+  </div>
+
+  <div class="receipt-items">
+    <div *ngFor="let item of data.items" class="receipt-item">
+      <span class="item-name">{{item.product.name}} x{{item.quantity}}</span>
+      <span class="item-price">{{item.product.price * item.quantity | currency:'PLN':'symbol':'1.2-2'}}</span>
+    </div>
+  </div>
+
+  <div class="receipt-summary">
+    <div class="summary-row">
+      <span>Suma:</span>
+      <span>{{data.subtotal | currency:'PLN':'symbol':'1.2-2'}}</span>
+    </div>
+    <div *ngIf="data.discountCode" class="summary-row">
+      <span>Zniżka ({{data.discountCode}}):</span>
+      <span>-{{data.subtotal - data.total | currency:'PLN':'symbol':'1.2-2'}}</span>
+    </div>
+    <div class="summary-row total">
+      <span>Razem:</span>
+      <span>{{data.total | currency:'PLN':'symbol':'1.2-2'}}</span>
+    </div>
+  </div>
+
+  <div class="barcode-container">
+    <canvas id="barcode"></canvas>
+  </div>
+
+  <div class="receipt-footer">
+    <p>Dziękujemy za zakupy!</p>
+    <button mat-raised-button color="primary" (click)="printReceipt()">Drukuj paragon</button>
+  </div>
+</div>
