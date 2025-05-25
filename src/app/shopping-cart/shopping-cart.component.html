@@ -8,7 +8,6 @@
 
   <div *ngIf="cartItems.length > 0">
     <table mat-table [dataSource]="cartItems" class="mat-elevation-z8">
-      <!-- Product Column -->
       <ng-container matColumnDef="product">
         <th mat-header-cell *matHeaderCellDef>Produkt</th>
         <td mat-cell *matCellDef="let item">
@@ -19,7 +18,6 @@
         </td>
       </ng-container>
 
-      <!-- Price Column -->
       <ng-container matColumnDef="price">
         <th mat-header-cell *matHeaderCellDef>Cena</th>
         <td mat-cell *matCellDef="let item">
@@ -27,7 +25,6 @@
         </td>
       </ng-container>
 
-      <!-- Quantity Column -->
       <ng-container matColumnDef="quantity">
         <th mat-header-cell *matHeaderCellDef>Ilość</th>
         <td mat-cell *matCellDef="let item">
@@ -36,7 +33,6 @@
         </td>
       </ng-container>
 
-      <!-- Total Column -->
       <ng-container matColumnDef="total">
         <th mat-header-cell *matHeaderCellDef>Razem</th>
         <td mat-cell *matCellDef="let item">
@@ -44,7 +40,6 @@
         </td>
       </ng-container>
 
-      <!-- Actions Column -->
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef>Akcje</th>
         <td mat-cell *matCellDef="let item">

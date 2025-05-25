@@ -4,7 +4,6 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideHttpClient } from '@angular/common/http';
 import { routes } from './app.routes';
 
-// Importy serwisów
 import { ProductService } from './product.service';
 import { CartService } from './cart.service';
 

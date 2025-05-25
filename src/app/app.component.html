@@ -1,14 +1,11 @@
 <div class="app-container">
-  <!-- Nagłówek z banerem i koszykiem -->
   <div class="header-container">
-    <!-- Baner sklepu -->
     <div class="store-banner">
       <div class="banner-content">
         <h1>Witamy w naszym sklepie!</h1>
         <p>Najlepsze produkty w konkurencyjnych cenach</p>
       </div>
       
-      <!-- Przycisk koszyka -->
       <button mat-icon-button class="cart-button" (click)="openCart()" 
               [attr.aria-label]="'Koszyk, liczba produktów: ' + cartItemCount">
         <mat-icon 
@@ -22,7 +19,6 @@
     </div>
   </div>
 
-  <!-- Główna zawartość -->
   <div class="main-content">
     <app-product-list></app-product-list>
   </div>

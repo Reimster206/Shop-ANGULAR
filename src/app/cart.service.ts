@@ -65,14 +65,12 @@ export class CartService {
   getDiscountedTotal(): number {
     let total = this.getTotal();
     
-    // Apply quantity discounts
     if (this.cartItems.length >= 3) {
-      total *= 0.9; // 10% off for 3 or more items
+      total *= 0.9; 
     } else if (this.cartItems.length >= 2) {
-      total *= 0.95; // 5% off for 2 items
+      total *= 0.95; 
     }
     
-    // Apply discount code if exists
     if (this.appliedDiscountCode) {
       const discount = this.discountCodes[this.appliedDiscountCode as keyof typeof this.discountCodes];
       total *= (1 - discount);
@@ -95,7 +93,7 @@ export class CartService {
   }
 
   private applyQuantityDiscounts(): void {
-    // Quantity discounts are applied in getDiscountedTotal()
+    
   }
 
   generateReceipt(): any {
